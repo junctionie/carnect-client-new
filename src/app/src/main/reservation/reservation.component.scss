@@ -46,11 +46,21 @@
   text-align: center;
 }
 
+.reservation-list-section {
+  height: 100vh;
+  overflow-y: scroll;
+  margin-top: 20px;
+}
+
 .reservation-card-list {
   margin: 20px 0;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.reservation-card-list:first-child {
+  margin-top: 0;
 }
 
 .reservation-card-area {
