@@ -1,0 +1,55 @@
+p {
+  margin: 0;
+}
+
+.main-container {
+  padding: 0 20px;
+  color: #000;
+}
+
+.area-section {
+  height: 250px;
+  background-color: #d4d4d4;
+  line-height: 250px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.date-section,
+.info-section {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.section-container {
+  margin-bottom: 90px;
+}
+
+.date-title {
+  font-size: 16px;
+}
+
+.deadline,
+.info-details {
+  margin-top: 10px;
+}
+
+.join-btn-container {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #242835;
+}
+.join-btn {
+  border-radius: 10px;
+  background-color: #4b81e7;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+}

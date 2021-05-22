@@ -1,0 +1,50 @@
+.main-container {
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 18px;
+}
+
+.personal-info {
+  height: 40px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  line-height: 40px;
+}
+
+.personal-info.detail {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.host-reservation {
+  margin: 40px 0;
+}
+
+.reservation-card-list {
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reservation-card-list:first-child {
+  margin-top: 10px;
+}
+
+.reservation-card-area {
+  width: 50%;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+  font-size: 40px;
+  color: #000;
+  line-height: 150px;
+  text-align: center;
+}

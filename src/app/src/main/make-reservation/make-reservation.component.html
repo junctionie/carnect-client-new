@@ -1,1 +1,38 @@
-<p>make-reservation works!</p>
+<div class="padding">
+  <form action="#">
+    <h2 class="form-title">reservation</h2>
+
+    <input class="form-input" type="text" placeholder="출발지" />
+    <input class="form-input" type="text" placeholder="목적지" />
+    <input class="form-input" type="text" placeholder="날짜" />
+    <textarea
+      name="reservation_info"
+      id="reservationInfo"
+      class="reservation-info"
+      cols="30"
+      rows="10"
+      maxlength="1000"
+      placeholder="내용"
+    >
+    </textarea>
+
+    <div class="checkbox-container">
+      <input id="checkWheelchair" type="checkbox" class="checkbox" />
+      <label for="checkWheelchair" class="checkbox-label"
+        >휠체어가 들어가야해요</label
+      >
+    </div>
+
+    <div class="checkbox-container">
+      <input id="checkHelp" type="checkbox" class="checkbox" />
+      <label for="checkHelp" class="checkbox-label">도움이 필요해요</label>
+    </div>
+
+    <div class="checkbox-container">
+      <input id="checkOther" type="checkbox" class="checkbox" />
+      <label for="checkOther" class="checkbox-label">ㅇㅇ이 필요해요</label>
+    </div>
+
+    <button class="reservation-btn" type="submit">예약하기</button>
+  </form>
+</div>

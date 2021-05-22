@@ -48,4 +48,8 @@ export class HomeComponent implements OnInit {
   go_reservation() {
     this.router.navigateByUrl("/reservation");
   }
+
+  clickItem() {
+    this.router.navigateByUrl("/reservation/1");
+  }
 }

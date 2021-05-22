@@ -28,7 +28,11 @@
     <!-- <a class="sub-title-link" href="#"><span class="blind">더 보기</span></a> -->
   </div>
   <div class="container">
-    <div *ngFor="let item of reservation_list" class="item">
+    <div
+      (click)="clickItem()"
+      *ngFor="let item of reservation_list"
+      class="item"
+    >
       <div class="item-top">
         <span class="top-text">seoul</span>
       </div>
