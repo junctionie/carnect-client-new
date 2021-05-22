@@ -1,0 +1,113 @@
+/* main */
+.sub-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.reservation-section {
+  padding: 20px;
+}
+
+.reservation-button {
+  //   width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #4b81e7;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.reservation-service-section,
+.ordered-service-section {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.sub-title-container {
+  //   position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  box-sizing: border-box;
+  //   margin-bottom: 10px;
+}
+
+.sub-title-link {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  /* border 지우고 > 아이콘 넣기 */
+  border: 1px solid #fff;
+}
+
+.card {
+  width: 180px;
+  background-color: rebeccapurple;
+  //   height: 100px;
+  //   display: flex;
+  //   flex-direction: column;
+}
+
+.card-item {
+  width: 100%;
+}
+
+.img-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .title {
+    color: white;
+  }
+  b {
+    font-weight: bold;
+  }
+
+  .close-btn {
+    // background-color: white;
+    // margin-left: 40px;
+    fill: white;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.item {
+  flex: 0 0 auto;
+  display: flex;
+  width: 180px;
+  border: 1px solid gray;
+  flex-direction: column;
+  height: 250px;
+  border-radius: 15px;
+  margin-right: 10px;
+  zoom: 1.1;
+
+  .item-top {
+    height: 170px;
+    background-color: #d5d5d5;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top-text {
+    font-size: 40px;
+    color: #000000;
+    background-color: #d5d5d5;
+  }
+
+  .item-bottom {
+    padding: 20px;
+  }
+}

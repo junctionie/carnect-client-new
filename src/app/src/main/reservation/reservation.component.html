@@ -1,1 +1,49 @@
-<p>reservation works!</p>
+<div class="padding">
+  <section>
+    <form action="#">
+      <div class="info-where-container from">
+        <label for="infoFromWhere" class="info-label"
+          >어디서 출발하시나요?</label
+        >
+        <input
+          id="infoFromWhere"
+          class="info-where"
+          type="text"
+          placeholder="busan"
+        />
+      </div>
+
+      <div class="info-where-container to">
+        <label for="infoToWhere" class="info-label">어디로 가시나요?</label>
+        <input
+          id="infoToWhere"
+          class="info-where"
+          type="text"
+          placeholder="seoul"
+        />
+      </div>
+
+      <div>
+        <label for="infoDate" class="info-label">날짜</label>
+        <input
+          id="infoDate"
+          class="info-date"
+          type="text"
+          placeholder="2021.05.24"
+        />
+      </div>
+
+      <button class="info-search-btn" type="submit">search</button>
+    </form>
+  </section>
+
+  <section style="height: 100vh; overflow-y: scroll">
+    <ul *ngFor="let item of reservation_list">
+      <!-- *ngFor -->
+      <li class="reservation-card-list">
+        <div class="reservation-card-area">SEOUL</div>
+        <div class="reservation-card-info"></div>
+      </li>
+    </ul>
+  </section>
+</div>

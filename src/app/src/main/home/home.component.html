@@ -1,1 +1,68 @@
-<p>home works!</p>
+<section class="reservation-section">
+  <h2 class="sub-title">Reservation</h2>
+
+  <form action="#">
+    <input type="text" placeholder="목적지" />
+    <!-- 날짜는 datepicker 사용 -->
+    <input type="text" placeholder="날짜" />
+
+    <button
+      class="reservation-button"
+      type="submit"
+      (click)="go_make_reservation()"
+    >
+      예약하기
+    </button>
+  </form>
+</section>
+
+<br />
+<br />
+
+<section class="reservation-service-section">
+  <div class="sub-title-container">
+    <h2 class="sub-title">현재 등록된 예약 서비스</h2>
+    <div class="sub-arrow" (click)="go_reservation()">
+      <img style="width: 25px" src="assets/right-arrow.svg" />
+    </div>
+    <!-- <a class="sub-title-link" href="#"><span class="blind">더 보기</span></a> -->
+  </div>
+  <div class="container">
+    <div *ngFor="let item of reservation_list" class="item">
+      <div class="item-top">
+        <span class="top-text">seoul</span>
+      </div>
+      <div class="item-bottom">
+        <p>목적지</p>
+        <br />
+        <p>2021.05.03</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br />
+<br />
+<br />
+<section class="ordered-service-section">
+  <div class="sub-title-container">
+    <h2 class="sub-title">당신을 위한 맞춤 서비스</h2>
+    <div class="sub-arrow" (click)="go_reservation()">
+      <img style="width: 25px" src="assets/right-arrow.svg" />
+    </div>
+    <!-- <a class="sub-title-link" href="#"><span class="blind">더 보기</span></a> -->
+  </div>
+
+  <div class="container">
+    <div *ngFor="let item of reservation_list" class="item">
+      <div class="item-top">
+        <span class="top-text">seoul</span>
+      </div>
+      <div class="item-bottom">
+        <p>목적지</p>
+        <br />
+        <p>2021.05.03</p>
+      </div>
+    </div>
+  </div>
+</section>
