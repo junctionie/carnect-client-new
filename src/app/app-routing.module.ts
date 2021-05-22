@@ -1,16 +1,16 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from "./src/main/home/home.component";
-import { MainComponent } from "./src/main/main.component";
-import { MakeReservationComponent } from "./src/main/make-reservation/make-reservation.component";
-import { MyComponent } from "./src/main/my/my.component";
-import { ReservationDetailComponent } from "./src/main/reservation-detail/reservation-detail.component";
-import { ReservationComponent } from "./src/main/reservation/reservation.component";
-import { StartComponent } from "./src/public/start/start.component";
-import { JoinUserComponent } from "./src/public/join-user/join-user.component";
-import { JoinComponent } from "./src/public/join/join.component";
-import { PublicComponent } from "./src/public/public.component";
-
+import { HomeComponent } from "./main/home/home.component";
+import { MainComponent } from "./main/main.component";
+import { MakeReservationComponent } from "./main/make-reservation/make-reservation.component";
+import { MyComponent } from "./main/my/my.component";
+import { ReservationDetailComponent } from "./main/reservation-detail/reservation-detail.component";
+import { ReservationComponent } from "./main/reservation/reservation.component";
+import { JoinUserComponent } from "./public/join-user/join-user.component";
+import { JoinComponent } from "./public/join/join.component";
+import { LoginCallbackComponent } from "./public/login-callback/login-callback.component";
+import { PublicComponent } from "./public/public.component";
+import { StartComponent } from "./public/start/start.component";
 const routes: Routes = [
   {
     path: "",
@@ -37,7 +37,11 @@ const routes: Routes = [
         path: "reservation/:reservationId",
         component: ReservationDetailComponent,
       }, //예약리스트 상세
-      { path: "my", component: MyComponent }, // 내 정보
+      { path: "my", component: MyComponent }, // 내 정보,
+      {
+        path: "login-callback/:token", // 공유한 카드 보는 컴포넌트라 분리가 필요.
+        component: LoginCallbackComponent,
+      },
     ],
   },
   { path: "**", pathMatch: "full", redirectTo: "home" },
