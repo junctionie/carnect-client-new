@@ -53,9 +53,11 @@
 }
 
 .reservation-card-list {
+  position: relative;
+  width: 100%;
   margin: 20px 0;
-  background-color: #fff;
   border-radius: 10px;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -66,10 +68,22 @@
 .reservation-card-area {
   width: 50%;
   height: 200px;
-  border-radius: 10px;
   background-color: #d4d4d4;
+  border-radius: 10px;
   font-size: 35px;
   color: #000;
   line-height: 200px;
   text-align: center;
+}
+
+.reservation-card-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  color: #000;
+  background-color: #fff;
+  box-sizing: border-box;
 }
