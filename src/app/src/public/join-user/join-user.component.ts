@@ -7,6 +7,24 @@ import { Router } from "@angular/router";
   styleUrls: ["./join-user.component.scss"],
 })
 export class JoinUserComponent implements OnInit {
+  public status_list = [
+    {
+      text: "장애인",
+      icon: "assets/disabled.png",
+    },
+    {
+      text: "임산부",
+      icon: "assets/pregnancy.png",
+    },
+    {
+      text: "어린이",
+      icon: "assets/baby-boy.png",
+    },
+    {
+      text: "노약자",
+      icon: "assets/old-man.png",
+    },
+  ];
   constructor(private router: Router) {}
 
   ngOnInit() {}

@@ -1,0 +1,45 @@
+span {
+  margin-top: 30px;
+}
+
+.wrapper-main {
+  display: flex;
+  height: 80%;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.item {
+  border-radius: 50% 50%;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.img {
+  width: 60px;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.text {
+  flex: 1;
+  font-size: 24px;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0px;
+
+  //    클릭했을 때
+  //   border: 1px solid orange;
+  //   border-radius: 10px;
+}

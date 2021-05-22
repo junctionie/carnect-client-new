@@ -1,3 +1,21 @@
-장애인, 임산부, 여린이, 노약자 선택
+<div class="wrap">
+  <div class="wrapper-main">
+    <div>
+      <h1>sign up</h1>
+      <br />
+      <br />
 
-<button (click)="go_login()">가입 끝</button>
+      <div class="card" *ngFor="let item of status_list">
+        <div class="item">
+          <img [src]="item.icon" class="img" />
+        </div>
+        <div class="text">
+          {{ item.text }}
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <button (click)="go_login()">가입하기</button>
+  </div>
+</div>
