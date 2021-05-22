@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-join-user',
-  templateUrl: './join-user.component.html',
-  styleUrls: ['./join-user.component.scss']
+  selector: "app-join-user",
+  templateUrl: "./join-user.component.html",
+  styleUrls: ["./join-user.component.scss"],
 })
 export class JoinUserComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  async go_login() {
+    this.router.navigateByUrl("/home");
   }
-
 }
