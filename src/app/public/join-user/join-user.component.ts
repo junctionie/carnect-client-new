@@ -7,6 +7,8 @@ import { Router } from "@angular/router";
   styleUrls: ["./join-user.component.scss"],
 })
 export class JoinUserComponent implements OnInit {
+  public select;
+
   public status_list = [
     {
       text: "장애인",
@@ -31,5 +33,10 @@ export class JoinUserComponent implements OnInit {
 
   async go_login() {
     this.router.navigateByUrl("/home");
+  }
+
+  click_item(item) {
+    console.log(item);
+    this.select = item;
   }
 }

@@ -14,12 +14,12 @@ export class LoginCallbackComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.token);
     const login = window.localStorage.setItem("token", this.token);
-    const card_idx = window.localStorage.getItem("card_idx");
-    if (this.isLogin() && card_idx) {
-      // this._router.navigateByUrl(`/write-card/${card_idx}`);
-    } else if (!card_idx) {
-      this._router.navigateByUrl("/home");
+    if (this.isLogin()) {
+      this._router.navigateByUrl(`/join`);
+    } else {
+      this._router.navigateByUrl("/start");
     }
   }
 

@@ -1,14 +1,14 @@
 <div class="wrap">
   <div class="wrapper-main">
-    <div>
+    <div *ngIf="user">
       <h1>sign up</h1>
       <br />
       <span>name</span><br />
-      <input type="text" />
+      <input type="text" [(ngModel)]="user.displayName" readonly />
       <br />
       <br />
       <span>e-mail</span><br />
-      <input type="text" />
+      <input type="text" [(ngModel)]="user.kakaoId" readonly />
     </div>
 
     <br />

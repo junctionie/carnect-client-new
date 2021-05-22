@@ -39,7 +39,9 @@ span {
   margin-bottom: 20px;
   padding: 10px 0px;
 
-  //    클릭했을 때
-  //   border: 1px solid orange;
-  //   border-radius: 10px;
+  &.select {
+    //    클릭했을 때
+    border: 1px solid orange;
+    border-radius: 10px;
+  }
 }

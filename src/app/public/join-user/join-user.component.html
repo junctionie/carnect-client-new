@@ -5,7 +5,12 @@
       <br />
       <br />
 
-      <div class="card" *ngFor="let item of status_list">
+      <div
+        class="card"
+        (click)="click_item(item.text)"
+        [ngClass]="{ select: item.text == select }"
+        *ngFor="let item of status_list"
+      >
         <div class="item">
           <img [src]="item.icon" class="img" />
         </div>

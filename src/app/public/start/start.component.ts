@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { ApiService } from "src/app/services/api.service";
 declare var Kakao;
 @Component({
   selector: "app-start",
@@ -7,7 +8,7 @@ declare var Kakao;
   styleUrls: ["./start.component.scss"],
 })
 export class StartComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private rest: ApiService) {}
 
   ngOnInit() {}
 
@@ -26,13 +27,18 @@ export class StartComponent implements OnInit {
           } = authObj;
           Kakao.API.request({
             url: "/v2/user/me",
-            success: async (resultObj) => {
+            success: async (resultObj: any) => {
               // alert(resultObj);
               // const result = await self.db.login_social(
               //   resultObj.id + "",
               //   access_token
               // );
-              this.router.navigateByUrl("/join");
+              console.log(resultObj);
+              const token = await self.rest
+                .post("/login", { id: resultObj.id, access_token })
+                .toPromise();
+              console.log(token);
+              self.router.navigateByUrl(`/login-callback/${token}`);
             },
 
             fail: (errorObj) => {

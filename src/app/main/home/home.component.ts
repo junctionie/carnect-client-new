@@ -40,9 +40,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router, private rest: ApiService) {}
 
-  async ngOnInit() {
-    await this.rest.get("/reservations", {}).toPromise();
-  }
+  async ngOnInit() {}
 
   go_make_reservation() {
     this.router.navigateByUrl("/make-reservation");
