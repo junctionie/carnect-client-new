@@ -23,7 +23,9 @@
 }
 
 .checkbox-container {
-  padding: 5px 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
 
 .reservation-btn {

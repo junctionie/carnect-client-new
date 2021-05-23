@@ -17,6 +17,8 @@ export class JoinComponent implements OnInit {
     const user = await this.rest.post("/user", { token }).toPromise();
     console.log(user);
     this.user = user;
+
+    window.localStorage.setItem("user", JSON.stringify(user));
     // console.log(user);
   }
 

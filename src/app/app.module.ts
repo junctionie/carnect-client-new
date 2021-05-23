@@ -20,6 +20,7 @@ import {
   MatInputModule,
   MatDialogModule,
   MatIconModule,
+  MatFormFieldModule,
 } from "@angular/material";
 import { MainComponent } from "./main/main.component";
 import { ReservationComponent } from "./main/reservation/reservation.component";
@@ -28,6 +29,8 @@ import { JoinComponent } from "./public/join/join.component";
 import { PublicComponent } from "./public/public.component";
 import { StartComponent } from "./public/start/start.component";
 import { LoginCallbackComponent } from "./public/login-callback/login-callback.component";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -56,6 +59,9 @@ import { LoginCallbackComponent } from "./public/login-callback/login-callback.c
     HttpClientModule,
     FormsModule,
     MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

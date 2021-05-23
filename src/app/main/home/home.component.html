@@ -1,19 +1,28 @@
 <section class="reservation-section">
   <h2 class="sub-title">Reservation</h2>
 
-  <form action="#">
-    <input type="text" placeholder="목적지" />
-    <!-- 날짜는 datepicker 사용 -->
-    <input type="text" placeholder="날짜" />
+  <!-- <form action="#"> -->
+  <input
+    type="text"
+    placeholder="어디로 가시나요?"
+    name="destination"
+    [(ngModel)]="reservation.destination"
+  />
+  <input
+    type="date"
+    placeholder="날짜"
+    name="startDate"
+    [(ngModel)]="reservation.startDate"
+  />
 
-    <button
-      class="reservation-button"
-      type="submit"
-      (click)="go_make_reservation()"
-    >
-      예약하기
-    </button>
-  </form>
+  <button
+    class="reservation-button"
+    type="submit"
+    (click)="go_make_reservation()"
+  >
+    예약하기
+  </button>
+  <!-- </form> -->
 </section>
 
 <br />

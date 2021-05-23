@@ -31,7 +31,10 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       { path: "home", component: HomeComponent }, // 가장 메인화면
-      { path: "make-reservation", component: MakeReservationComponent }, // 예약하기
+      {
+        path: "make-reservation/:destination/:startDate",
+        component: MakeReservationComponent,
+      }, // 예약하기
       { path: "reservation", component: ReservationComponent }, // 예약리스트
       {
         path: "reservation/:reservationId",
