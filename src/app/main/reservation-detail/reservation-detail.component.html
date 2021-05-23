@@ -5,16 +5,16 @@
     </section>
 
     <section class="date-section">
-      <h2 class="date-title">일시</h2>
+      <h2 class="date-title">date</h2>
       <p>
         {{ data.startDate | date: "yyyy-MM-dd" }} ~
         {{ data.endDate | date: "yyyy-MM-dd" }}
       </p>
-      <p class="deadline">마감까지 {{ remain_time }}일 남음</p>
+      <p class="deadline">{{ remain_time }} days until deadline</p>
     </section>
 
     <section class="info-section">
-      <p>참여한 인원 수: 3/{{ data.limitPersonCount }}</p>
+      <p>Total participants: 3/{{ data.limitPersonCount }}</p>
       <p class="info-details">
         {{ data.description }}
       </p>
@@ -27,7 +27,7 @@
       type="submit"
       (click)="participations(data.reservationId)"
     >
-      참가
+      Join
     </button>
   </div>
 </div>

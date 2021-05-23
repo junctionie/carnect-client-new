@@ -1,16 +1,18 @@
 <div class="padding">
   <section class="personal-info-section">
-    <h2 class="section-title">내 정보</h2>
+    <h2 class="section-title">My info</h2>
 
     <ul>
-      <li class="personal-info detail"><i class="info-icon"></i>장애인</li>
+      <li class="personal-info detail">
+        <i class="info-icon"></i>Disabled person
+      </li>
       <li class="personal-info">{{ user.displayName }}</li>
       <li class="personal-info">{{ user.kakaoId }}</li>
     </ul>
   </section>
 
   <section class="host-reservation">
-    <h2 class="section-title">주최한 예약</h2>
+    <h2 class="section-title">Hosted reservation</h2>
     <ul *ngFor="let item of reservation">
       <!-- *ngFor -->
       <li class="reservation-card-list" (click)="clickItem(item.reservationId)">
@@ -28,7 +30,7 @@
   </section>
 
   <section class="join-reservation">
-    <h2 class="section-title">참가한 예약</h2>
+    <h2 class="section-title">Joined reservation</h2>
     <ul *ngFor="let item of participations">
       <!-- *ngFor -->
       <li class="reservation-card-list" (click)="clickItem(item.reservationId)">

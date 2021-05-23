@@ -4,13 +4,13 @@
   <!-- <form action="#"> -->
   <input
     type="text"
-    placeholder="어디로 가시나요?"
+    placeholder="Where are you going?"
     name="destination"
     [(ngModel)]="reservation.destination"
   />
   <input
     type="date"
-    placeholder="날짜"
+    placeholder="date"
     name="startDate"
     [(ngModel)]="reservation.startDate"
   />
@@ -20,7 +20,7 @@
     type="submit"
     (click)="go_make_reservation()"
   >
-    예약하기
+    Make a reservation
   </button>
   <!-- </form> -->
 </section>
@@ -30,7 +30,7 @@
 
 <section class="reservation-service-section">
   <div class="sub-title-container">
-    <h2 class="sub-title">현재 등록된 예약 서비스</h2>
+    <h2 class="sub-title">Registered reservation service</h2>
     <div class="sub-arrow" (click)="go_reservation()">
       <img style="width: 25px" src="assets/right-arrow.svg" />
     </div>
@@ -62,7 +62,7 @@
 <br />
 <section class="ordered-service-section">
   <div class="sub-title-container">
-    <h2 class="sub-title">당신을 위한 맞춤 서비스</h2>
+    <h2 class="sub-title">Custom service for you</h2>
     <div class="sub-arrow" (click)="go_reservation()">
       <img style="width: 25px" src="assets/right-arrow.svg" />
     </div>
