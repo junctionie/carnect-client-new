@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { ApiService } from "src/app/services/api.service";
 
 @Component({
   selector: "app-reservation",
@@ -6,37 +8,17 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./reservation.component.scss"],
 })
 export class ReservationComponent implements OnInit {
-  public reservation_list = [
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-  ];
+  public reservation_list;
 
-  constructor() {}
+  constructor(private rest: ApiService, private router: Router) {}
 
-  ngOnInit() {}
+  async ngOnInit() {
+    this.reservation_list = await this.rest
+      .get("/reservations/gets", {})
+      .toPromise();
+  }
+
+  async clickItem(reservationId) {
+    this.router.navigateByUrl(`/reservation/${reservationId}`);
+  }
 }

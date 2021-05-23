@@ -40,9 +40,16 @@
   <section class="reservation-list-section">
     <ul *ngFor="let item of reservation_list">
       <!-- *ngFor -->
-      <li class="reservation-card-list">
-        <div class="reservation-card-area">SEOUL</div>
-        <div class="reservation-card-info">information</div>
+      <li class="reservation-card-list" (click)="clickItem(item.reservationId)">
+        <div class="reservation-card-area">{{ item.destination }}</div>
+        <div class="reservation-card-info">
+          <p>{{ item.description }}</p>
+          <br />
+          <p>
+            {{ item.startDate | date: "yyyy-MM-dd" }} ~
+            {{ item.endDate | date: "yyyy-MM-dd" }}
+          </p>
+        </div>
       </li>
     </ul>
   </section>
