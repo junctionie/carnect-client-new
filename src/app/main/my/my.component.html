@@ -4,33 +4,43 @@
 
     <ul>
       <li class="personal-info detail"><i class="info-icon"></i>장애인</li>
-      <li class="personal-info">이름</li>
-      <li class="personal-info">메일</li>
+      <li class="personal-info">{{ user.displayName }}</li>
+      <li class="personal-info">{{ user.kakaoId }}</li>
     </ul>
   </section>
 
   <section class="host-reservation">
     <h2 class="section-title">주최한 예약</h2>
-    <ul>
+    <ul *ngFor="let item of reservation">
       <!-- *ngFor -->
-      <li class="reservation-card-list">
-        <div class="reservation-card-area">SEOUL</div>
-        <div class="reservation-card-info"></div>
+      <li class="reservation-card-list" (click)="clickItem(item.reservationId)">
+        <div class="reservation-card-area">{{ item.destination }}</div>
+        <div class="reservation-card-info">
+          <p>{{ item.description }}</p>
+          <br />
+          <p>
+            {{ item.startDate | date: "yyyy-MM-dd" }} ~
+            {{ item.endDate | date: "yyyy-MM-dd" }}
+          </p>
+        </div>
       </li>
     </ul>
   </section>
 
   <section class="join-reservation">
     <h2 class="section-title">참가한 예약</h2>
-    <ul>
+    <ul *ngFor="let item of participations">
       <!-- *ngFor -->
-      <li class="reservation-card-list">
-        <div class="reservation-card-area">SEOUL</div>
-        <div class="reservation-card-info"></div>
-      </li>
-      <li class="reservation-card-list">
-        <div class="reservation-card-area">SEOUL</div>
-        <div class="reservation-card-info"></div>
+      <li class="reservation-card-list" (click)="clickItem(item.reservationId)">
+        <div class="reservation-card-area">{{ item.destination }}</div>
+        <div class="reservation-card-info">
+          <p>{{ item.description }}</p>
+          <br />
+          <p>
+            {{ item.startDate | date: "yyyy-MM-dd" }} ~
+            {{ item.endDate | date: "yyyy-MM-dd" }}
+          </p>
+        </div>
       </li>
     </ul>
   </section>

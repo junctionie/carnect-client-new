@@ -19,7 +19,6 @@ export class JoinComponent implements OnInit {
     this.user = user;
 
     window.localStorage.setItem("user", JSON.stringify(this.user));
-    // console.log(user);
   }
 
   async go_login() {
