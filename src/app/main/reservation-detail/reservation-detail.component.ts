@@ -36,4 +36,22 @@ export class ReservationDetailComponent implements OnInit {
   }
 
   async load_data() {}
+
+  async participations(reservationId) {
+    let user: any = window.localStorage.getItem("user");
+    user = JSON.parse(user);
+
+    const data = {
+      userId: user.userId,
+      reservationId,
+    };
+
+    try {
+      await this.rest.post("/participations", data).toPromise();
+      alert("참가 등록되었습니다.");
+      this._router.navigateByUrl("/home");
+    } catch (err) {
+      alert("참가가 불가합니다" + err);
+    }
+  }
 }
