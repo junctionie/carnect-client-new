@@ -44,9 +44,8 @@ export class MakeReservationComponent implements OnInit {
     }
 
     let user: any = window.localStorage.getItem("user");
-    user = JSON.parse(user);
     console.log(user);
-
+    user = JSON.parse(user);
     if (!user) {
       alert("유저를 찾을 수 없습니다! 다시 로그인 해주세요 :)");
       this.router.navigateByUrl("/start");

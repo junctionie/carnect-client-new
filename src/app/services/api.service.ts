@@ -19,7 +19,7 @@ export class ApiService {
     if (res.status === 0) {
       throw res.error;
     }
-    let body = res.data;
+    let body = res;
     return body || {};
   }
 

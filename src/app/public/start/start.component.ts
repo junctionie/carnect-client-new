@@ -37,7 +37,6 @@ export class StartComponent implements OnInit {
               const token = await self.rest
                 .post("/login", { id: resultObj.id, access_token })
                 .toPromise();
-              console.log(token);
               self.router.navigateByUrl(`/login-callback/${token}`);
             },
 

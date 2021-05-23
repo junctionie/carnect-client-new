@@ -18,7 +18,7 @@ export class JoinComponent implements OnInit {
     console.log(user);
     this.user = user;
 
-    window.localStorage.setItem("user", JSON.stringify(user));
+    window.localStorage.setItem("user", JSON.stringify(this.user));
     // console.log(user);
   }
 
