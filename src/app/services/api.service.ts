@@ -4,7 +4,8 @@ import { catchError, map } from "rxjs/operators";
 import { throwError } from "rxjs";
 import { HttpParams } from "@angular/common/http";
 
-const endpoint = "http://localhost:3000";
+const endpoint =
+  "http://ec2-3-34-115-26.ap-northeast-2.compute.amazonaws.com:3000";
 const httpOptions = {
   headers: new HttpHeaders({ "Access-Control-Allow-Origin": "*" }),
   params: new HttpParams(),
