@@ -18,18 +18,10 @@ export class MakeReservationComponent implements OnInit {
   async ngOnInit() {
     const destination = this.route.snapshot.params["destination"];
     const startDate = this.route.snapshot.params["startDate"];
-    console.log(destination);
 
     this.data = {
       destination,
       startDate,
-    };
-    const data = {
-      userId: 4,
-      startDate: "2021-05-29 02:11:02",
-      endDate: "2021-05-29 02:11:09",
-      limitPersonCount: 5,
-      description: "우왕 굳",
     };
   }
 

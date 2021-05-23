@@ -38,17 +38,20 @@
   </div>
   <div class="container">
     <div
-      (click)="clickItem()"
+      (click)="clickItem(item.reservationId)"
       *ngFor="let item of reservation_list"
       class="item"
     >
       <div class="item-top">
-        <span class="top-text">seoul</span>
+        <span class="top-text">{{ item.destination }}</span>
       </div>
       <div class="item-bottom">
-        <p>목적지</p>
+        <p>{{ item.description }}</p>
         <br />
-        <p>2021.05.03</p>
+        <p>
+          {{ item.startDate | date: "yyyy-MM-dd" }} ~
+          {{ item.endDate | date: "yyyy-MM-dd" }}
+        </p>
       </div>
     </div>
   </div>
@@ -69,12 +72,15 @@
   <div class="container">
     <div *ngFor="let item of reservation_list" class="item">
       <div class="item-top">
-        <span class="top-text">seoul</span>
+        <span class="top-text">{{ item.destination }}</span>
       </div>
       <div class="item-bottom">
-        <p>목적지</p>
+        <p>{{ item.description }}</p>
         <br />
-        <p>2021.05.03</p>
+        <p>
+          {{ item.startDate | date: "yyyy-MM-dd" }} ~
+          {{ item.endDate | date: "yyyy-MM-dd" }}
+        </p>
       </div>
     </div>
   </div>

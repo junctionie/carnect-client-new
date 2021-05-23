@@ -14,42 +14,20 @@ export class HomeComponent implements OnInit {
     startDate: moment().format("YYYY-MM-DD"),
   };
 
-  public reservation_list = [
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-  ];
+  public reservation_list;
 
   constructor(private router: Router, private rest: ApiService) {}
 
   async ngOnInit() {
-    const reserv = await this.rest.get("/reservations/gets", {}).toPromise();
+    this.load_data();
+  }
 
-    console.log(reserv);
+  async load_data() {
+    this.reservation_list = await this.rest
+      .get("/reservations/gets", {})
+      .toPromise();
+
+    console.log(this.reservation_list);
   }
 
   go_make_reservation() {
@@ -62,7 +40,7 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl("/reservation");
   }
 
-  clickItem() {
-    this.router.navigateByUrl("/reservation/1");
+  clickItem(reservationId) {
+    this.router.navigateByUrl(`/reservation/${reservationId}`);
   }
 }
