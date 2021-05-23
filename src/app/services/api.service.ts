@@ -2,10 +2,12 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, map } from "rxjs/operators";
 import { throwError } from "rxjs";
+import { HttpParams } from "@angular/common/http";
 
 const endpoint = "http://localhost:3000";
 const httpOptions = {
   headers: new HttpHeaders({ "Access-Control-Allow-Origin": "*" }),
+  params: new HttpParams(),
 };
 
 @Injectable({
@@ -49,8 +51,11 @@ export class ApiService {
       .pipe(map(this.extractData), catchError(this.handleError));
   }
 
-  get(uri, param) {
+  get(uri, param?) {
     const url = endpoint + uri;
+
+    const options = { params: new HttpParams().set("name", "hello") };
+
     console.log(url);
     return this.http
       .get(url, httpOptions)
